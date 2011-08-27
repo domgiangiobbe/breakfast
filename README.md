@@ -4,9 +4,11 @@ The goal here is to take advantage of best practices and frontend frameworks so 
 
 ## Requires:
 - Middleman
+- Compass
 - Slim
 - SASS
 
 ## Uses:
 - HTML5 Boilerplate
+- Modernizr
 - Golden Grid System
