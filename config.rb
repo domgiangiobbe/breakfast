@@ -11,7 +11,13 @@
 #   config.output_style = :compact
 # end
 
+###
+# Slim
+###
+
 set :slim, :pretty => true, :tabsize => 2, :disable_escape => true
+
+page "*", :layout => false
 
 ###
 # Page command
