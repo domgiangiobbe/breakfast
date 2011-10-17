@@ -11,18 +11,22 @@ html.no-js lang="en"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
     = stylesheet_link_tag 'style.css'
+
+    // Uncomment to enable Holmes diagnostic css (http://red-root.com/sandbox/holmes/)
+    // = stylesheet_link)tag 'holmes.css'
+
     = javascript_include_tag 'libs/modernizr'
     script 
 
   body
 
     div id="container"
-	  header
+  	  header
 
 
-	  #main role="main"
-	    h1 Get started on your project!
+  	  #main role="main"
+  	    h1 Get started on your project!
 
-	  footer
+  	  footer
 
   = javascript_include_tag 'ggs.js', 'plugins', 'script'
