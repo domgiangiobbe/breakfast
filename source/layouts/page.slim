@@ -19,13 +19,12 @@ html.no-js lang="en"
 
   body
 
-    div id="container"
-  	  header
-
+    #container
+  	  = render "partials/header"
 
   	  #main role="main"
-  	    h1 Get started on your project!
+  	    == yield
 
-  	  footer
+  	  = render "partials/footer"
 
   = javascript_include_tag 'ggs.js', 'plugins', 'script'
