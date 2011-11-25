@@ -1,0 +1,100 @@
+@charset "utf-8"
+
+@import "compass"
+@import "compass/css3"
+@import "modules/normalize"
+
+/* Reusable variables for universal styles */
+
+$base-font-family: "Helvetica", unquote('sans-serif')
+$base-font-size: 16px
+$base-line-height: 1.4
+$base-font-color: #333
+
+$link-color: #607890
+$link-hover-color: #036
+$link-active-color: #607890
+$link-visited-color: #607890
+
+$selected-font-color: #fff  // color for selected text
+$selected-background-color: #ff5E99  // bg-color for selected text
+
+@mixin full-size
+	float: left
+	clear: left
+	width: 100%
+
+.container
+	width: 980px
+	margin: auto
+
+
+// Embed all @font-face fonts heres.
+// @import "compass/css3/font-face";
+
+// Add font-face fonts using the following syntax:
+// @include font-face("Blooming Grove", font-files("examples/bgrove.ttf", truetype, "examples/bgrove.otf", opentype));
+
+/* Universal Styles */
+
+html, body, #container
+	@include full-size
+
+html
+	-webkit-font-smoothing: antialiased
+
+body
+	font-size: 		$base-font-size
+	font-family: 	$base-font-family
+	line-height: 	$base-line-height
+	color: 			$base-font-color
+
+#container
+	min-width: 1000px
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+a
+	color: $link-color
+	&:visited
+		color: $link-visited-color
+	&:hover
+		color: $link-hover-color
+	&:active
+		color: $link-active-color
+	&:focus
+		outline: thin dotted
+
+
+/* Primary Styles (mobile first) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query based styles */
+
+@media only screen and (min-width: 480px)
+	/* Style adjustments for viewports 480px and over go here */
+
+
+
+@media only screen and (min-width: 768px)
+	/* Style adjustments for viewports 768px and over go here */
+
+
+
+@import "modules/helpers"
+@import "modules/print"

@@ -1,12 +1,16 @@
 # Slim Options
 
 set :slim, :pretty => true, :tabsize => 2, :disable_escape => true
-
 page "*", :layout => false
 
 ###
 # Page command
 ###
+
+# Change Compass configuration
+compass_config do |config|
+  config.preferred_syntax = :sass
+end
 
 # Per-page layout changes:
 # 
@@ -50,11 +54,11 @@ set :js_dir, "scripts"
 configure :build do
 
   # Activate minification when building for production
-  # activate :minify_css
-  # activate :minify_javascript
+  activate :minify_css
+  activate :minify_javascript
   
   # Enable cache buster
-  # activate :cache_buster
+  activate :cache_buster
   
   # Use relative URLs
   activate :relative_assets
