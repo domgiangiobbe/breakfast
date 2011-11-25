@@ -5,7 +5,10 @@ html.no-js lang="en"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
 
-
+    - if data.page.title?
+      title #{data.page.title}
+    - else
+      title Breakfast is Served
     
     meta name="description" content=""
     meta name="author" content=""
