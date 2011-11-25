@@ -32,3 +32,6 @@ intermediate
 publish
 build
 .idea
+
+# Packages
+node_modules
