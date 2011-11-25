@@ -4,28 +4,24 @@ html.no-js lang="en"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
 
-    title Breakfast is Served
+    title Page Listing
     
     meta name="description" content=""
     meta name="author" content=""
     meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-    = stylesheet_link_tag 'style.css'
-
-    // Uncomment to enable Holmes diagnostic css (http://red-root.com/sandbox/holmes/)
-    // = stylesheet_link)tag 'holmes.css'
-
-    = javascript_include_tag 'libs/modernizr'
+    // = stylesheet_link_tag 'http://mysite.com/myliststyle.css' — Link to an optionally externally hosted css file for page listings to show clients or coworkers.
 
   body
 
     div id="container"
   	  header
-
+        h1 Page Listing
 
   	  #main role="main"
-  	    h1 Get started on your project!
+        p Here I usually list out all the pages as a list of links for static sites.
 
-  	  footer
+        ul.list
+          li= link_to "Home", "home.html"
+          
 
-  = javascript_include_tag 'ggs.js', 'plugins', 'script'
