@@ -17,6 +17,7 @@ html.no-js lang="en"
     = stylesheet_link_tag 'style.css'
 
     // Uncomment to enable Holmes diagnostic css (http://red-root.com/sandbox/holmes/)
+
     // = stylesheet_link)tag 'libs/holmes.css'
 
     = javascript_include_tag 'libs/modernizr'
@@ -26,8 +27,11 @@ html.no-js lang="en"
     #container
   	  = render "partials/header"
 
+
   	  #main role="main"
   	    == yield
+
+        p Page layout: #{data.page.header}
 
   	  = render "partials/footer"
 
@@ -37,3 +41,8 @@ html.no-js lang="en"
     script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"
     script
       | window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
+
+  // Uncomment to include the Google Analytics tracking code taken from HBP5
+  // Change UAXXXXXXXX1 to be your site's ID
+
+  // = render "partials/ga_tracking", :locals => { :ID => 'UAXXXXXXXX1'}
