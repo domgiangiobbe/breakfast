@@ -4,7 +4,18 @@
 @import "compass/css3"
 @import "modules/normalize"
 
+
+// Embed all @font-face fonts heres.
+// @import "compass/css3/font-face";
+
+// Add font-face fonts using the following syntax:
+// @include font-face("Blooming Grove", font-files("examples/bgrove.ttf", truetype, "examples/bgrove.otf", opentype));
+
+
 /* Reusable variables for universal styles */
+
+$base-container-size: 980px
+$base-wrapper-size: 1020px
 
 $base-font-family: "Helvetica", unquote('sans-serif')
 $base-font-size: 16px
@@ -19,29 +30,28 @@ $link-visited-color: #607890
 $selected-font-color: #fff  // color for selected text
 $selected-background-color: #ff5E99  // bg-color for selected text
 
+/* Mixin and other blocks */
+
 @mixin full-size
 	float: left
 	clear: left
 	width: 100%
-
-.container
-	width: 980px
-	margin: auto
-
-
-// Embed all @font-face fonts heres.
-// @import "compass/css3/font-face";
-
-// Add font-face fonts using the following syntax:
-// @include font-face("Blooming Grove", font-files("examples/bgrove.ttf", truetype, "examples/bgrove.otf", opentype));
 
 /* Universal Styles */
 
 html, body, #container
 	@include full-size
 
-html
-	-webkit-font-smoothing: antialiased
+// Remove text-shadow in selection highlight: h5bp.com/i
+
+::-moz-selection
+	background: #32326f
+	color: #fff
+	text-shadow: none
+::selection
+	background: #32326f
+	color: #fff
+	text-shadow: none
 
 body
 	font-size: 		$base-font-size
@@ -50,7 +60,11 @@ body
 	color: 			$base-font-color
 
 #container
-	min-width: 1000px
+	min-width: $base-wrapper-size
+
+.container
+	width: $base-container-size
+	margin: auto
 
 h1, h2, h3, h4, h5, h6
 	margin: 0
